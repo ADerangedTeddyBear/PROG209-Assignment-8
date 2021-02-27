@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Random Game Reviews</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- <script src="index.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+  <!-- Home Page  ------------------------------------------------------------------>
+  <div data-role="page" id="home">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Random Game Reviews</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Load">Add Review</a></li>
+          <li><a href="#ListAll">List Of All Reviews</a></li>
+          <li><a href="#ListSome" >Most Recent Reviews</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div>
+        <h2> My Collection of Movies</h2>
+      </div>
+    </div>
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Created by Thai Anh and Darius</h1>
+    </div>
+  </div>
+  <!---------------------------------------------------------------------------------->
+
+
+  <!-- Add a game -->
+  <div data-role="page" id="Load">
+    <!--  page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Add a Movie</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Load">Add Review</a></li>
+          <li><a href="#ListAll">List Of All Reviews</a></li>
+          <li><a href="#ListSome" >Most Recent Reviews</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div data-role="content" data-theme='c'>
+      <h2>Add a game review</h2>
+
+      Name <br />
+      <input type="text" value="" id="Name" />
+
+      <div class="ui-field-contain">
+        <label for="select-genre">Type</label>
+        <select name="select-genre" id="Type">
+          <option value="Action">Game</option>
+          <option value="Comedy">Game System</option>
+        </select>
+      </div>
+  
+      Rating <br />
+      <input type="number" value="" id="Rating" />
+
+      Review <br />
+      <input type="text" value="" id="Review" />
+    
+      <input type="button" value="Add review" id="buttonAdd" data-inline="true" />
+      <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
+    </div>
+
+       
+    
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Created by Thai Anh and Darius</h1>
+    </div>
+  </div>
+<!---------------------------------------------------------------------------------->
+
+<!--List of all movies-->
+  <div data-role="page" id="ListAll">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>My Movie List</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Load">Add Review</a></li>
+          <li><a href="#ListAll">List Of All Reviews</a></li>
+          <li><a href="#ListSome" >Most Recent Reviews</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+    </div>
+
+
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <p>List of all reviews</p>
+      <div id="divMovieList"></div>
+    </div>
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Created by Thai Anh and Darius</h1>
+    </div>
+  </div>
+  </div>
+  <!---------------------------------------------------------------------------------->
+
+
+
+<!--Most Recent Reviews-->
+  <div data-role="page" id="ListSome">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Most Recent Reviews</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Load">Add Review</a></li>
+          <li><a href="#ListAll">List Of All Reviews</a></li>
+          <li><a href="#ListSome">Most Recent Reviews</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <h2>Here are the most recent reviews for games and systems</h2>
+    </div>
+    <div class = "ui-grid-a">
+      <div class = "ui-block-a">
+         <div class = "ui-bar ui-bar-a">Most Recent Game Review</div>
+         <ul>
+          <li>Name: Ride to Hell: Retribution</li>
+          <li>Rating: 10</li>
+          <li>Review: This game is so bad that it's hilarious. Get it!</li>
+        </ul>
+      </div>
+      
+      <div class = "ui-block-b">
+         <div class = "ui-bar ui-bar-a">Most Recent System Review</div>
+         <ul>
+          <li>Name: Playstation 5</li>
+          <li>Rating: 7</li>
+          <li>Review: It's a good console, but it's very hard to find. </li>
+        </ul>
+      </div>
+   </div>
+  
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Created by Thai Anh and Darius</h1>
+    </div>
+  </div>
+  </div>
+  <!-------------------------------------------------------------------->
+
+
+
+</body>
+
+</html>
