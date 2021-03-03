@@ -17,3 +17,12 @@ li {
 .gridProperties {
   color: rgb(13, 114, 63);
 }
+body {
+  background-color: lightblue;
+}
+
+div {
+  background-color: greenyellow;
+  
+}
+
