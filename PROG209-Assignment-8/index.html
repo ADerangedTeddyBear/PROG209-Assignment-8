@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Random Game Reviews</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- <script src="index.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+  <!-- Home Page  ------------------------------------------------------------------>
+  <div data-role="page" id="home">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Random Game Reviews</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Load">Add Review</a></li>
+          <li><a href="#ListAll">List Of All Reviews</a></li>
+          <li><a href="#ListSome" >Most Recent Reviews</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div>
+        <h2> Welcome to the Videogame review page!</h2>
+      </div>
+      <img src=" images/home.jpg" alt= " matrix ">
+    </div>
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Created by Thai Anh and Darius</h1>
+    </div>
+  </div>
+  <!---------------------------------------------------------------------------------->
+
+
+  <!-- Add a game -->
+  <div data-role="page" class="gridProperties" id="Load">
+    <!--  page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Add a Game or Gamesystem</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Load">Add Review</a></li>
+          <li><a href="#ListAll">List Of All Reviews</a></li>
+          <li><a href="#ListSome" >Most Recent Reviews</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div data-role="content" data-theme='c'>
+      <h2>Add a game review</h2>
+    </div>
+    <img src=" images/images.jpeg" alt= " video games"> 
+<br>
+      Name <br />
+      <input type="text" value="" id="Name" />
+
+      <div class="ui-field-contain">
+        <label for="select-genre">Type</label>
+        <select name="select-genre" id="Type">
+          <option value="Action">Game</option>
+          <option value="Comedy">Game System</option>
+        </select>
+      </div>
+  
+      Rating <br />
+      <input type="number" value="" id="Rating" />
+
+      Review <br />
+      <input type="text" value="" id="Review" />
+    
+      <input type="button" value="Add review" id="buttonAdd" data-inline="true" />
+      <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
+    </div>
+
+       
+    
+    <!--   page footer -->
+    <div data-role="footer" dat
+  
+  
+  
+    -theme='b'>
+      <h1>Created by Thai Anh and Darius</h1>
+    </div>
+  </div>
+<!---------------------------------------------------------------------------------->
+
+<!--List of all games-->
+  <div data-role="page" id="ListAll">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Game Review List</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Load">Add Review</a></li>
+          <li><a href="#ListAll">List Of All Reviews</a></li>
+          <li><a href="#ListSome" >Most Recent Reviews</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+    </div>
+  <!--   page content -->
+    <h2>Here is a list of all reviews.</h2>
+       <ul>  
+    <li>Name:Cyberpunk 2077  </li>
+          <li>Rating:6 </li>
+          <li>Review: Okay on PC, terrible on consoles </li>
+        </ul>
+      
+    
+         <ul>
+          <li>Name: Playstation 5</li>
+          <li>Rating: 7</li>
+          <li>Review: It's a good console, but it's very hard to find. </li>
+        </ul>
+      
+       <ul>
+        <li>Namw: Xbox Series X</li>
+        <li>Rating: 8 </li>
+        <li>Review: Cool system. Have fun finding one!   </li>
+      </ul>
+       <ul>
+        <li>Name:Battlefield V  <li>Rating: 7</li>
+        <li>Review: Good but not as good as  Battlefield 1  </li>
+      </ul>
+      <ul>  
+        <li>Name:Cyberpunk 2077  </li>
+              <li>Rating:6 </li>
+              <li>Review: Okay on PC, terrible on consoles </li>
+            </ul>
+          
+        
+             <ul>
+              <li>Name: Nintindo Switch</li>
+              <li>Rating: 9</li>
+              <li>Review: Great device for games on the go. </li>
+            </ul>
+            <ul>  
+              <li>Name: Red Dead Redemption 2  </li>
+                    <li>Rating: 10  </li>
+                    <li>Review: Amazing. Get it. </li>
+                  </ul>
+                   <ul>
+                    <li>Name: Xbox Series S</li>
+                    <li>Rating: 4</li>
+                    <li>Review:Not that good. Get it for emulation but not for actual xbox games.  </li>
+                  </ul>
+                </ul>
+                <ul>
+                 <li>Name: Road To Hell Retribution</li>
+                 <li>Rating: 10 </li>
+                 <li>Review: Its so bad that it is good.Go get it!  </li>
+               </ul>
+
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Created by Thai Anh and Darius</h1>
+    </div>
+  </div>
+  </div>
+  <!---------------------------------------------------------------------------------->
+
+
+
+<!--Most Recent Reviews-->
+  <div data-role="page" id="ListSome">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Most Recent Reviews</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Load">Add Review</a></li>
+          <li><a href="#ListAll">List Of All Reviews</a></li>
+          <li><a href="#ListSome">Most Recent Reviews</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <h2>Here are the most recent reviews for games and systems.</h2>
+    </div>
+    <div class = "ui-grid-a">
+      <div class = "ui-block-a">
+         <div class = "ui-bar ui-bar-a recentColumns">Most Recent Game Review</div>
+         <ul>
+          <li>Name: Ride to Hell: Retribution</li>
+          <li>Rating: 10</li>
+          <li>Review: This game is so bad that it's hilarious. Get it!</li>
+        </ul>
+      </div>
+      
+      <div class = "ui-block-b">
+         <div class = "recentColumns ui-bar ui-bar-a">Most Recent System Review</div>
+         <ul>
+          <li>Name: Playstation 5</li>
+          <li>Rating: 7</li>
+          <li>Review: It's a good console, but it's very hard to find. </li>
+        </ul>
+      </div>
+   </div>
+  
+    <!--   page footer -->
+    <di++v data-role="footer" data-theme='b'>
+      <h1>Created by Thai Anh and Darius</h1>
+    </div>
+  </div>
+  </div>
+  <!-------------------------------------------------------------------->
+
+
+
+</body>
+
+</html>
