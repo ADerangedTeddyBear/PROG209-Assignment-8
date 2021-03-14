@@ -7,7 +7,9 @@ var app = express();
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(express.static('public'))
 
 // insert our data code here
@@ -33,7 +35,7 @@ serverSystemArray.push(new GameSystemObject("Playstation 5", "system", 8, "Nice 
 serverSystemArray.push(new GameSystemObject("Xbox Series S", "system", 6, "It's okay. But it's not that strong. "));
 
 // index page , serve the HTML
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
@@ -42,21 +44,33 @@ app.get('/gamelist', function (req, res) {
     res.json(serverGameArray);
 });
 
-app.get('/systemlist', function(req, res) {
+app.get('/systemlist', function (req, res) {
     res.json(serverSystemArray);
 });
 
+/* POST to addMovie */
+app.post('/addGame', function (req, res) {
+    serverGameArray.push(req.body);
+    // set the res(ponse) object's status propery to a 200 code, which means success
+    res.status(200).send(JSON.stringify('success'));
+});
 
+/* POST to addMovie */
+app.post('/addSystem', function (req, res) {
+    serverSystemArray.push(req.body);
+    // set the res(ponse) object's status propery to a 200 code, which means success
+    res.status(200).send(JSON.stringify('success'));
+});
 
 // error page 
-app.get('/error', function(req, res) {
+app.get('/error', function (req, res) {
     // should get real data from some real operation, but instead ...
     let message = "some text from someplace";
-    let errorObject ={
+    let errorObject = {
         status: "this is real bad",
         stack: "somebody called #$% somebody who called somebody <awful>"
     };
-    res.render('pages/error', {  // pass the data to the page renderer
+    res.render('pages/error', { // pass the data to the page renderer
         message: message,
         error: errorObject
     });
@@ -64,7 +78,7 @@ app.get('/error', function(req, res) {
 
 
 
-app.listen(3000);  // setting port number 
+app.listen(3000); // setting port number 
 console.log('3000 is the magic port');
 
 module.exports = app;
